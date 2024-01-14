@@ -9,6 +9,7 @@
 //Test8: by 孟昭辰
 //Test9: by 黄瑞申
 //Test10：by 吕炳蓁
+//testtime: by legion
 App({
   onLaunch: function () {
     if (!wx.cloud) {
