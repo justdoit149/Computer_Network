@@ -1,6 +1,12 @@
 // app.js
 //Test: by 山雨冬
 //Test2: by 山雨冬
+//Test3: by 山雨冬
+//Test4: by 孟昭辰
+//Test5: by 孟昭辰
+//Test6: by 黄瑞申
+//Test7: by 黄瑞申
+//Test8: by 孟昭辰
 App({
   onLaunch: function () {
     if (!wx.cloud) {
