@@ -3,6 +3,7 @@
 //Test2: by 山雨冬
 //Test3: by 山雨冬
 //Test4: by 孟昭辰
+//Test5: by 孟昭辰
 App({
   onLaunch: function () {
     if (!wx.cloud) {
