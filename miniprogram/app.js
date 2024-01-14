@@ -11,7 +11,7 @@
 //Test10：by 吕炳蓁
 //testtime: by legion
 //Testname: by hrs
-///Testname: by 山雨冬（自己拉取pull后处理冲突后再push）
+///Testname: by 山雨冬（自己拉取后处理冲突，再强制推送，请大家不要擅自使用强制推送！！）
 App({
   onLaunch: function () {
     if (!wx.cloud) {
