@@ -5,6 +5,7 @@
 //Test4: by 孟昭辰
 //Test5: by 孟昭辰
 //Test6: by 黄瑞申
+//Test7: by 黄瑞申
 App({
   onLaunch: function () {
     if (!wx.cloud) {
