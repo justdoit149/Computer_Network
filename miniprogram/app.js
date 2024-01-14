@@ -10,6 +10,7 @@
 //Test9: by 黄瑞申
 //Test10：by 吕炳蓁
 //testtime: by legion
+//Testname: by hrs
 App({
   onLaunch: function () {
     if (!wx.cloud) {
