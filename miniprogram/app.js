@@ -6,7 +6,12 @@
 //Test5: by 孟昭辰
 //Test6: by 黄瑞申
 //Test7: by 黄瑞申
-//Test9: by 山雨冬（冲突测试）
+//Test8: by 孟昭辰
+//Test9: by 黄瑞申
+//Test10：by 吕炳蓁
+//testtime: by legion
+//Testname: by hrs
+///Testname: by 山雨冬（自己拉取pull后处理冲突后再push）
 App({
   onLaunch: function () {
     if (!wx.cloud) {
