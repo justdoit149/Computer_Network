@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index"
   ],
+
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
@@ -9,6 +10,17 @@
     "navigationBarTitleText": "天气预报",
     "navigationBarTextStyle": "black"
   },
+
+  "requiredPrivateInfos": [
+    "getLocation"
+  ],
+
+  "permission": {
+    "scope.userLocation": {
+      "desc": "天气预报请求获取您的位置信息"
+    }
+  },
+  
   "sitemapLocation": "sitemap.json",
   "style": "v2",
   "lazyCodeLoading": "requiredComponents"
