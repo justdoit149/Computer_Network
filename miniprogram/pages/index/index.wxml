@@ -1,4 +1,10 @@
-<!--index.wxml-->
-<view class="container">
+<!-- 这是WXML的注释 -->
 
-</view>
+<text>{{msg+"1"}}</text>
+<view>{{msg+"2"}}</view>
+<view style="color: yellow; font-size: 48rpx"> 你好 </view>
+<button bind:tap="onClick"> 更新按钮 </button>
+
+<!--组件示例，需要在该页面的json文件中引入该组件才能使用；可传参-->
+<example></example>
+
