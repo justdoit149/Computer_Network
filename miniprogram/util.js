@@ -1,21 +1,71 @@
+// 工具类。
+
 module.exports = {
-  getUserLocation: getUserLocation, // 获取当前位置信息
-  syncRequest: syncRequest, // syncRequest()是wx.request()封装后的异步函数，参数和返回值与wx.request一样
-  getNowWeather: getNowWeather
+  getNowWeather: getNowWeather, //获取实时天气
+  getDayWeather: getDayWeather, //获取当日天气
+  getWeekWeather: getWeekWeather, //获取七日天气
+  getAirQuality: getAirQuality, //获取空气质量
+  getWeatherIndices: getWeatherIndices, //获取天气指数
+  getUserLocation: getUserLocation, //获取当前位置信息
+  syncRequest: syncRequest //syncRequest()是wx.request()封装后的异步函数，参数和返回值与wx.request一样
 }
 
 const key = '6b286c0f26f041c9863ccffd6921cbf4'
 
-function getNowWeather(locationID){
-   var res = null
-   res = syncRequest({
+async function getNowWeather(locationID){
+   var res = await syncRequest({
     url: 'https://devapi.qweather.com/v7/weather/now',
     data: {
       key: key,
       location: locationID
     },
   })
-  return res
+  return res.data
+}
+
+async function getDayWeather(locationID){
+  var res = await syncRequest({
+    url: 'https://devapi.qweather.com/v7/weather/24h',
+    data: {
+      key: key,
+      location: locationID
+    },
+  })
+  return res.data
+}
+
+async function getWeekWeather(locationID){
+  var res = await syncRequest({
+    url: 'https://devapi.qweather.com/v7/weather/7d',
+    data: {
+      key: key,
+      location: locationID
+    },
+  })
+  return res.data
+}
+
+async function getAirQuality(locationID){
+  var res = await syncRequest({
+    url: 'https://devapi.qweather.com/v7/air/now',
+    data: {
+      key: key,
+      location: locationID
+    },
+  })
+  return res.data
+}
+
+async function getWeatherIndices(locationID){
+  var res = await syncRequest({
+    url: 'https://devapi.qweather.com/v7/indices/1d',
+    data: {
+      key: key,
+      location: locationID,
+      type: 0
+    },
+  })
+  return res.data
 }
 
 async function getUserLocation(){
@@ -36,7 +86,6 @@ async function getUserLocation(){
         location: res.longitude + ',' + res.latitude
       },
     })
-    console.log(res2)
   } catch (err) {
     console.log('位置请求失败',err)
     return null
@@ -61,3 +110,18 @@ function syncRequest(options) {
     })
   })
 }
+
+// 异步请求，多个可并行请求时使用异步请求，并发执行节省时间
+// function asyncRequest(options){
+//   wx.request({  
+//     url: options.url,  
+//     method: options.method || 'GET',  
+//     data: options.data,  
+//     success(res) {  
+//       return res
+//     },  
+//     fail(err) {  
+//       console.log("请求失败",err)
+//     }  
+//   })
+// }
