@@ -1,68 +1,30 @@
 // pages/LogIn/LogIn.js
 // 登录页，登陆成功后根据当前位置跳转至Weather页
 
+var Util = require('../../util');
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
-  },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
-
+  async onLoad(options) {
+    //这里还需要登录
+    var Location = await Util.getUserLocation();
+    console.log(Location)
+    if (Location != null) {
+      wx.navigateTo({
+        url: '../Weather/Weather?loc=114',
+        
+      })
+    } else {
+      console.log("?")
+    }
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
 
-  },
+});
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
 
-  },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
-  }
-})
+  
