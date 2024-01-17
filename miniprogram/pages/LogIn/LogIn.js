@@ -11,11 +11,9 @@ Page({
   async onLoad(options) {
     //这里还需要登录
     var Location = await Util.getUserLocation();
-    console.log(Location)
     if (Location != null) {
       wx.navigateTo({
-        url: '../Weather/Weather?loc=114',
-        
+        url: '../Weather/Weather?Location='+JSON.stringify(Location),
       })
     } else {
       console.log("?")
