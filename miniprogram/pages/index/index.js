@@ -43,6 +43,9 @@ Page({
     this.setData({
       msg: "新信息"
     })
+    wx.navigateTo({
+      url: '../weather/weather'
+    })
   }
 
 })

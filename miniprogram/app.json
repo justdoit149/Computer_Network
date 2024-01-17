@@ -1,6 +1,15 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/LogIn/LogIn",
+    "pages/Weather/Weather",
+    "pages/List/List",
+    "pages/Search/Search",
+    "pages/Me/Me",
+    "pages/NowWeather/NowWeather",
+    "pages/DayWeather/DayWeather",
+    "pages/WeekWeather/WeekWeather"
+
   ],
 
   "window": {
