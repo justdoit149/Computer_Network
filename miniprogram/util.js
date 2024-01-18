@@ -110,18 +110,3 @@ function syncRequest(options) {
     })
   })
 }
-
-// 异步请求，多个可并行请求时使用异步请求，并发执行节省时间
-// function asyncRequest(options){
-//   wx.request({  
-//     url: options.url,  
-//     method: options.method || 'GET',  
-//     data: options.data,  
-//     success(res) {  
-//       return res
-//     },  
-//     fail(err) {  
-//       console.log("请求失败",err)
-//     }  
-//   })
-// }

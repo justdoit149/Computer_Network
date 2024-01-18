@@ -2,7 +2,6 @@
 // 登录页，登陆成功后根据当前位置跳转至Weather页
 
 var Util = require('../../util');
-
 Page({
 
   /**
@@ -10,16 +9,16 @@ Page({
    */
   async onLoad(options) {
     //这里还需要登录
-    var Location = await Util.getUserLocation();
-    if (Location != null) {
-      wx.navigateTo({
-        url: '../Weather/Weather?Location='+JSON.stringify(Location),
+    getApp().globalData.location = await Util.getUserLocation();
+    if (getApp().globalData.location != null) {
+      wx.switchTab({
+        url: '../Weather/Weather',
       })
     } else {
-      wx.navigateTo({
-        url: '../Me/Me?Location='+JSON.
-        stringify(Location),
-      })
+      // wx.switchTab({
+      //   url: '../Me/Me?Location='+JSON.
+      //   stringify(Location),
+      // })
     }
   },
 
