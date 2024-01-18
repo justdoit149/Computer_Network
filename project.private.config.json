@@ -7,6 +7,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/WeekWeather/WeekWeather",
+          "pathName": "pages/WeekWeather/WeekWeather",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "db guide",
           "pathName": "pages/databaseGuide/databaseGuide",
           "query": ""
