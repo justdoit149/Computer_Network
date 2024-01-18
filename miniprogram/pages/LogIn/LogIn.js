@@ -16,7 +16,10 @@ Page({
         url: '../Weather/Weather?Location='+JSON.stringify(Location),
       })
     } else {
-      console.log("?")
+      wx.navigateTo({
+        url: '../Me/Me?Location='+JSON.
+        stringify(Location),
+      })
     }
   },
 
