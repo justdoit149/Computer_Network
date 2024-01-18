@@ -1,5 +1,14 @@
 <!--components/DayPart/DayPart.wxml-->
-<text>{{dayWeather.hourly[0].icon}}</text>
+<view class="container">
+  <view class="header">
+    <view class="flex_one">
+      <image src="/images/{{dayWeather.hourly[0].icon}}.svg" style="height: 100rpx;width: 100rpx;filter: invert(1);"></image>
+      <view class="temperature">{{dayWeather.hourly[0].text}}</view>
+      <view class="weather">{{dayWeather.hourly[0].temp}}℃</view>
+    </view>
+    <view class="tips">查看24小时天气</view>
+  </view>
+</view>
 
 
 
