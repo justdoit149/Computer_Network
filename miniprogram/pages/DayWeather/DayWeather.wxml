@@ -1,3 +1,24 @@
 <!--pages/DayWeather/DayWeather.wxml-->
-<text>pages/DayWeather/DayWeather.wxml</text>
-<text>{{dayWeather.hourly[0].icon}}</text>
+<!--pages/WeekWeather/WeekWeather.wxml-->
+<view class="container">
+  <view class="top">
+    <view class="title">{{location}}</view>
+    <view class="visual">
+      <view class="header">
+        <view class="temperature">{{dayWeather.hourly[0].temp}}℃</view>
+        <image src="/images/{{dayWeather.hourly[0].icon}}.svg" style="height: 200rpx;width: 200rpx;"></image>
+      </view>
+      <view class="time">{{hour[0]}}</view>
+    </view>
+  </view>
+  <scroll-view class="list" scroll-x = "true">
+    <view wx:for="{{dayWeather.hourly}}" wx:if="{{index > 0}}" wx:for-index="index" wx:for-item="item" class="list_item_parent">
+      <view class="list_item_one {{index % 2 == 0 ? 'list_item_two' : ''}}">
+        <text class="list_time">{{hour[index]}}</text>
+        <image src="/images/{{item.icon}}.svg" style="height:40rpx;width:40rpx" ></image>
+        <text class="list_t_highest">{{item.temp}}℃</text>
+        <text class="list_t_lowest">{{item.text}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

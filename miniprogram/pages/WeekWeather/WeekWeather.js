@@ -3,6 +3,7 @@
 
 Page({
   data: {
+    scrollHeight: 0,
     weekWeather: null
   },
 
@@ -11,5 +12,17 @@ Page({
     this.setData({
       weekWeather: this.weekWeather
     })
+  },
+  cal_scrollHeight(){
+    let that = this;
+    let query = wx.createSelectorQuery().in(this);
+    query.select('.top').boundingClientRect(function(res){
+      let topHeight = res.height;
+      let screenHeight = wx.getSystemInfoSync().windowHeight;
+      let scrollHeight =  screenHeight - topHeight - 70;
+      that.setData({
+        scrollHeight: scrollHeight
+      })
+    }).exec();
   },
 })

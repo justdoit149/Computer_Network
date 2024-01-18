@@ -3,13 +3,21 @@
 
 Page({
   data: {
-    dayWeather: null
+    dayWeather: null,
+    hour:'[]'
   },
 
   onLoad(options) {
     this.dayWeather = JSON.parse(options.dayWeather)
     this.setData({
       dayWeather: this.dayWeather
+    })
+    let data = [];
+    for(let i = 0;i < this.dayWeather.hourly.length;i ++){
+        data.push(this.dayWeather.hourly[i].fxTime.substring(11,16))
+    }
+    this.setData({
+      hour: data
     })
   },
 })
