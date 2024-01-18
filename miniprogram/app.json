@@ -4,7 +4,6 @@
     "pages/Weather/Weather",
     "pages/List/List",
     "pages/Search/Search",
-    "pages/Me/Me",
     "pages/NowWeather/NowWeather",
     "pages/DayWeather/DayWeather",
     "pages/WeekWeather/WeekWeather"
@@ -28,9 +27,6 @@
     },{
       "pagePath": "pages/List/List",
       "text": "列表"
-    },{
-      "pagePath": "pages/Me/Me",
-      "text": "我"
     }]
   },
 

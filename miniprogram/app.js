@@ -3,6 +3,7 @@
 App({
   globalData: {
     UserID: String,
+    UserData: Array,
     location: null
   },
 
