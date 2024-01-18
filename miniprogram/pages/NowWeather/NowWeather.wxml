@@ -1,16 +1,2 @@
-<!-- pages/NowWeather/NowWeather.wxml -->
-<view class="container">
-    <view class="location">{{ location }}</view>
-    <text class="update-time">更新时间：{{ updateTime }}</text>
-    <view class="current-weather">
-        <text class="temperature">{{ currentTemperature }}°C</text>
-        <text class="condition">{{ currentCondition }}</text>
-        <text class="wind">
-            风向: {{ windDirection }}，风力等级: {{ windScale }}，风速: {{ windSpeed }}m/s
-        </text>
-        <text class="precip">降水量: {{ precip }}mm</text>
-        <text class="humidity">湿度: {{ humidity }}%</text>
-        <text class="vis">能见度: {{ vis }}km</text>
-        <text class="apparent-temperature">体感温度: {{ apparentTemperature }}°C</text>
-    </view>
-</view>
+<!--pages/NowWeather/NowWeather.wxml-->
+<text>pages/NowWeather/NowWeather.wxml</text>

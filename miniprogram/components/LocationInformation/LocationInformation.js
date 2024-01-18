@@ -1,4 +1,4 @@
-// components/Location/Location.js
+// components/LocationInformation/LocationInformation.js
 // Weather页顶部的位置信息（初始进入时是当前位置），点击可跳转至Search页
 
 Component({

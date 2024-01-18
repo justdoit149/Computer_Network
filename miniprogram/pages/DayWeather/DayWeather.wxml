@@ -1,2 +1,3 @@
 <!--pages/DayWeather/DayWeather.wxml-->
 <text>pages/DayWeather/DayWeather.wxml</text>
+<text>{{dayWeather.hourly[0].icon}}</text>

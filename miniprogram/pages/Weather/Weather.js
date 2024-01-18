@@ -1,26 +1,18 @@
 // pages/Weather/Weather.js
-// 天气页，包括Location、Star、NowPart、DayPart、WeekPart、WeatherIndices、BottomNavigation组件
+// 天气页，包括LocationInformation、Star、NowPart、DayPart、WeekPart、WeatherIndices、BottomNavigation组件
 
 var Util = require('../../util');
 
-
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    location: null,
-    nowWeather: null,
-    dayWeather: null,
-    weekWeather: null,
-    airQuality: null,
-    weatherIndices: null
+    location: Object,
+    nowWeather: Object,
+    dayWeather: Object,
+    weekWeather: Object,
+    airQuality: Object,
+    weatherIndices: Object
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   async onLoad(options) {
     //搜索、列表等页面直接切到该城市时，url里也要有Location字段参数！
     //url传对象参数，需要用JSON.stringify()转成字符串，再用JSON.parse()转回对象！
@@ -38,61 +30,31 @@ Page({
     this.weekWeather = results[2]
     this.airQuality = results[3]
     this.weatherIndices = results[4]
+
+    
     // console.log(this.location)
     // console.log(this.nowWeather)
     // console.log(this.dayWeather)
     // console.log(this.weekWeather)
     // console.log(this.airQuality)
     // console.log(this.weatherIndices)
-    
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
+  onClickNowPart: function(){
+    wx.navigateTo({
+      url: '../../pages/NowWeather/NowWeather'
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
+  onClickDayPart: function(){
+    wx.navigateTo({
+      url: '../../pages/DayWeather/DayWeather?dayWeather='+JSON.stringify(this.dayWeather)
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  onClickWeekPart: function(){
+    wx.navigateTo({
+      url: '../../pages/WeekWeather/WeekWeather'
+    })
   }
 })

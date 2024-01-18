@@ -1,4 +1,11 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "我的位置"
+  "usingComponents": {
+    "LocationInformation": "/components/LocationInformation/LocationInformation",
+    "Star": "/components/Star/Star",
+    "NowPart": "/components/NowPart/NowPart",
+    "DayPart": "/components/DayPart/DayPart",
+    "WeekPart": "/components/WeekPart/WeekPart",
+    "WeatherIndices": "/components/WeatherIndices/WeatherIndices",
+    "BottomNavigation": "/components/BottomNavigation/BottomNavigation"
+  }
 }

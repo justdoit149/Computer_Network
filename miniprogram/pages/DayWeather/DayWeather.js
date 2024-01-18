@@ -1,20 +1,23 @@
 // pages/DayWeather/DayWeather.js
 // 24小时天气详情页
-//test
-Page({
 
+Page({
   /**
    * 页面的初始数据
    */
   data: {
-
+    dayWeather: Object
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    dayWeather = JSON.parse(options.dayWeather)
+    this.setData({
+      dayWeather: dayWeather
+    })
+    console.log(dayWeather)
   },
 
   /**
