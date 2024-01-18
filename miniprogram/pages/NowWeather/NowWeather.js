@@ -2,22 +2,18 @@
 // 当前天气详情页
 
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    nowWeather,
-    airQuality
+    nowWeather: null,
+    airQuality: null
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad(options) {
-    nowWeather = options.nowWeather
-    airQuality = options.airQuality
-    console.log(nowWeather,airQuality)
+    this.nowWeather = JSON.parse(options.nowWeather)
+    this.airQuality = JSON.parse(options.airQuality)
+    this.setData({
+      nowWeather: this.nowWeather,
+      airQuality: this.airQuality
+    })
   },
 
   /**

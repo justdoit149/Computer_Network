@@ -5,17 +5,17 @@ var Util = require('../../util');
 
 Page({
   data: {
-    location: Object,
-    nowWeather: Object,
-    dayWeather: Object,
-    weekWeather: Object,
-    airQuality: Object,
-    weatherIndices: Object
+    location: null,
+    nowWeather: null,
+    dayWeather: null,
+    weekWeather: null,
+    airQuality: null,
+    weatherIndices: null
   },
 
+  //搜索、列表等页面直接切到该城市时，url里也要有Location字段参数！
+  //url传对象参数，需要用JSON.stringify()转成字符串，再用JSON.parse()转回对象！
   async onLoad(options) {
-    //搜索、列表等页面直接切到该城市时，url里也要有Location字段参数！
-    //url传对象参数，需要用JSON.stringify()转成字符串，再用JSON.parse()转回对象！
     this.location = JSON.parse(options.Location)
     //Promise.all()接受一个异步函数数组，它们之间可并行，全部完成后返回结果数组再向下进行！！！
     const results = await Promise.all([
@@ -30,19 +30,19 @@ Page({
     this.weekWeather = results[2]
     this.airQuality = results[3]
     this.weatherIndices = results[4]
-
-    
-    // console.log(this.location)
-    // console.log(this.nowWeather)
-    // console.log(this.dayWeather)
-    // console.log(this.weekWeather)
-    // console.log(this.airQuality)
-    // console.log(this.weatherIndices)
+    this.setData({
+      location: this.location,
+      nowWeather: results[0],
+      dayWeather: results[1],
+      weekWeather: results[2],
+      airQuality: results[3],
+      weatherIndices: results[4]
+    })
   },
 
   onClickNowPart: function(){
     wx.navigateTo({
-      url: '../../pages/NowWeather/NowWeather'
+      url: '../../pages/NowWeather/NowWeather?nowWeather='+JSON.stringify(this.nowWeather)+'&airQuality='+JSON.stringify(this.airQuality)
     })
   },
 
@@ -54,7 +54,7 @@ Page({
 
   onClickWeekPart: function(){
     wx.navigateTo({
-      url: '../../pages/WeekWeather/WeekWeather'
+      url: '../../pages/WeekWeather/WeekWeather?weekWeather='+JSON.stringify(this.weekWeather)
     })
   }
 })

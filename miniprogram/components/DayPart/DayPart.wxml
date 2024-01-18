@@ -1,5 +1,5 @@
 <!--components/DayPart/DayPart.wxml-->
-<text>components/DayPart/DayPart.wxml</text>
+<text>{{dayWeather.hourly[0].icon}}</text>
 
 
 
