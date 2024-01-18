@@ -4,13 +4,15 @@
 Page({
   data: {
     dayWeather: null,
-    hour:'[]'
+    hour:'[]',
+    location:'[]'
   },
 
   onLoad(options) {
     this.dayWeather = JSON.parse(options.dayWeather)
     this.setData({
-      dayWeather: this.dayWeather
+      dayWeather: this.dayWeather,
+      location: getApp().globalData.location
     })
     let data = [];
     for(let i = 0;i < this.dayWeather.hourly.length;i ++){

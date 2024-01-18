@@ -1,2 +1,17 @@
-<!--pages/NowWeather/NowWeather.wxml-->
-<text>pages/NowWeather/NowWeather.wxml</text>
+<!-- pages/NowWeather/NowWeather.wxml -->
+<view class="container">
+    <view class="location">{{location.location[0].name}}</view>
+    <text class="obs-time">更新时间：{{ obsTime }}</text>
+    <view class="current-weather">
+        <view class="temperature-and-icon">
+            <text class="temperature">{{ nowWeather.now.temp }}°C {{ nowWeather.now.text }}</text>
+            <image src="/images/{{nowWeather.now.icon}}.svg" style="height: 200rpx; width: 200rpx; filter: invert(1);"></image>
+        </view>
+        <text class="wind">风向风级: {{ nowWeather.now.windDir }}{{ nowWeather.now.windScale }}级</text>
+        <text class="precip">降水量: {{ nowWeather.now.precip }}mm</text>
+        <text class="humidity">湿度: {{ nowWeather.now.humidity }}%</text>
+        <text class="vis">能见度: {{ nowWeather.now.vis }}km</text>
+        <text class="apparent-temperature">体感温度: {{ nowWeather.now.feelsLike }}°C</text>
+        <text class="airQuality">空气质量：{{ airQuality.now.category }}</text>
+    </view>
+</view>

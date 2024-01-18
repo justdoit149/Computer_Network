@@ -4,13 +4,15 @@
 Page({
   data: {
     scrollHeight: 0,
-    weekWeather: null
+    weekWeather: null,
+    location:'[]'
   },
 
   onLoad(options) {
     this.weekWeather = JSON.parse(options.weekWeather)
     this.setData({
-      weekWeather: this.weekWeather
+      weekWeather: this.weekWeather,
+      location: getApp().globalData.location
     })
   },
   cal_scrollHeight(){

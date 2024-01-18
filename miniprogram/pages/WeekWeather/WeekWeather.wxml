@@ -1,11 +1,11 @@
 <!--pages/WeekWeather/WeekWeather.wxml-->
 <view class="container">
   <view class="top">
-    <view class="title">{{location}}</view>
+    <view class="title">{{location.location[0].name}}</view>
     <view class="visual">
       <view class="header">
         <view class="temperature">{{weekWeather.daily[0].tempMin}} ~ {{weekWeather.daily[0].tempMax}}℃</view>
-        <image src="/images/{{weekWeather.daily[0].iconDay}}.svg" style="height: 200rpx;width: 200rpx;"></image>
+        <image src="/images/{{weekWeather.daily[0].iconDay}}.svg" style="height: 200rpx;width: 200rpx;filter: invert(1);"></image>
       </view>
       <view class="time">{{weekWeather.daily[0].fxDate}}</view>
     </view>
