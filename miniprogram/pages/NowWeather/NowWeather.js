@@ -4,16 +4,24 @@
 Page({
   data: {
     nowWeather: null,
-    airQuality: null
+    obsTime: null,
+    airQuality: null,
+    location: '[]'
   },
 
   onLoad(options) {
     this.nowWeather = JSON.parse(options.nowWeather)
     this.airQuality = JSON.parse(options.airQuality)
     this.setData({
+      location: getApp().globalData.location,
       nowWeather: this.nowWeather,
       airQuality: this.airQuality
     })
+    this.setData({
+      obsTime: this.nowWeather.now.obsTime.substring(0, 10) + " " +
+        this.nowWeather.now.obsTime.substring(11, 16)
+    })
+    console.log(this.location)
   },
 
   /**
@@ -57,10 +65,6 @@ Page({
   onReachBottom() {
 
   },
-
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage() {
 
   }
