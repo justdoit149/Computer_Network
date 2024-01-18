@@ -1,6 +1,5 @@
 {
   "pages": [
-    
     "pages/LogIn/LogIn",
     "pages/Weather/Weather",
     "pages/List/List",
@@ -9,7 +8,6 @@
     "pages/NowWeather/NowWeather",
     "pages/DayWeather/DayWeather",
     "pages/WeekWeather/WeekWeather"
-
   ],
 
   "window": {

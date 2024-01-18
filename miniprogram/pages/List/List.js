@@ -1,5 +1,5 @@
 // pages/List/List.js
-// 列表页，包括ToSearch、CityItem组件
+// 列表页，包括CityItem组件
 
 Page({
 
