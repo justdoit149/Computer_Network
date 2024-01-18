@@ -1,6 +1,6 @@
 // pages/DayWeather/DayWeather.js
 // 24小时天气详情页
-
+//test
 Page({
 
   /**
