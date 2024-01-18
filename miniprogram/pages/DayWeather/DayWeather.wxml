@@ -2,11 +2,11 @@
 <!--pages/WeekWeather/WeekWeather.wxml-->
 <view class="container">
   <view class="top">
-    <view class="title">{{location}}</view>
+    <view class="title">{{location.location[0].name}}</view>
     <view class="visual">
       <view class="header">
         <view class="temperature">{{dayWeather.hourly[0].temp}}℃</view>
-        <image src="/images/{{dayWeather.hourly[0].icon}}.svg" style="height: 200rpx;width: 200rpx;"></image>
+        <image src="/images/{{dayWeather.hourly[0].icon}}.svg" style="height: 200rpx;width: 200rpx;filter: invert(1);"></image>
       </view>
       <view class="time">{{hour[0]}}</view>
     </view>
