@@ -17,11 +17,12 @@
   align-items: center;
   justify-content: space-around;
   height: 200rpx;
-  width: 80%;
+  width: 95%;
   border-radius: 20px;
-  margin: 20px auto;
+  margin: 10px auto;
   /* 增加上下组件与当前组件的距离，同时水平居中 */
 }
+
 .weather_24 {
   display: flex;
   flex-direction: row;
@@ -30,6 +31,7 @@
   height: 175rpx;
   width: 80%;
 }
+
 .flex_one {
   display: flex;
   flex-direction: column;
@@ -38,6 +40,7 @@
   height: 150rpx;
   width: 80%;
 }
+
 .flex_two {
   display: flex;
   flex-direction: column;
@@ -46,6 +49,7 @@
   height: 150rpx;
   width: 80%;
 }
+
 .flex_three {
   display: flex;
   flex-direction: column;
@@ -54,6 +58,7 @@
   height: 150rpx;
   width: 80%;
 }
+
 .flex_four {
   display: flex;
   flex-direction: column;
@@ -62,26 +67,31 @@
   height: 150rpx;
   width: 80%;
 }
+
 .now {
   color: #ffffff;
   font-size: 12px;
   font-weight: 400;
 }
+
 .next_six {
   color: #ffffff;
   font-size: 12px;
   font-weight: 400;
 }
+
 .next_twelve {
   color: #ffffff;
   font-size: 12px;
   font-weight: 400;
 }
+
 .next_eighteen {
   color: #ffffff;
   font-size: 12px;
   font-weight: 400;
 }
+
 .tips {
   color: #ffffff;
   font-size: 12px;
