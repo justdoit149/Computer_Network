@@ -1,6 +1,16 @@
 <!--pages/Weather/Weather.wxml--> 
-<NowPart nowWeather = "{{nowWeather}}" airQuality = "{{airQuality}}" bind:tap="onClickNowPart"> </NowPart>
-<DayPart dayWeather = "{{dayWeather}}" bind:tap="onClickDayPart"> </DayPart>
-<WeekPart weekWeather = "{{weekWeather}}" bind:tap="onClickWeekPart"> </WeekPart>
-<WeatherIndices weatherIndices = "{{weatherIndices}}"> </WeatherIndices>
+<view class="container">
+  <view class="header">
+    <view class="background">
+      <button bind:tap="onClickToSearch" class="place">{{location.location[0].name}}</button>
+    </view>
+    <view class="background">
+      <button bind:tap="onClickToStar" class="star">收藏</button>
+    </view>
+  </view>
+  <NowPart nowWeather = "{{nowWeather}}" airQuality = "{{airQuality}}" bind:tap="onClickNowPart"> </NowPart>
+  <DayPart dayWeather = "{{dayWeather}}" bind:tap="onClickDayPart"> </DayPart>
+  <WeekPart weekWeather = "{{weekWeather}}" bind:tap="onClickWeekPart"> </WeekPart>
+  <WeatherIndices weatherIndices = "{{weatherIndices}}"> </WeatherIndices>
+</view>
 <!---->

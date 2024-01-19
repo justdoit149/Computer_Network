@@ -1,1 +1,35 @@
 /* pages/Weather/Weather.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+.container{
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: top;
+  width: 100%;
+  height: 100%;
+}
+.header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 75rpx;
+}
+.background{
+  display: flex;
+  height: 60rpx;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  border-radius: 20px;
+  background: linear-gradient(#0869d8,#87c1f1);
+}
+.star{
+  color: #ffffff;
+}
+.place{
+  color: #ffffff;
+}
