@@ -1,12 +1,12 @@
 // pages/Weather/Weather.js
 // 天气页，包括NowPart、DayPart、WeekPart、WeatherIndices组件
 
-const { locationEncapsulation } = require('../../util');
 var Util = require('../../util');
 const app = getApp()
 
 Page({
   data: {
+    isStarred: false,
     location: null,
     nowWeather: null,
     dayWeather: null,
@@ -27,6 +27,7 @@ Page({
       Util.getAirQuality(location.location[0].id),
       Util.getWeatherIndices(location.location[0].id)
     ])
+    this.isStarred = Util.isStarred()
     this.location = location
     this.nowWeather = results[0]
     this.dayWeather = results[1]
@@ -34,6 +35,7 @@ Page({
     this.airQuality = results[3]
     this.weatherIndices = results[4]
     this.setData({
+      isStarred: this.isStarred,
       location: location,
       nowWeather: results[0],
       dayWeather: results[1],
@@ -41,6 +43,7 @@ Page({
       airQuality: results[3],
       weatherIndices: results[4]
     })
+    this.onClickToStar()
   },
 
   onClickNowPart: function(){
@@ -68,12 +71,12 @@ Page({
   },
 
   onClickToStar: function(){
-    if(Util.isStarred()){
+    if(this.isStarred){
       wx.cloud.callFunction({
         name: "delete",
         data: {
           id: app.globalData.UserID,
-          geo: locationEncapsulation()
+          geo: Util.locationEncapsulation()
         },
         success: function (res) {
           console.log(res.result); //状态信息
@@ -85,7 +88,7 @@ Page({
         name: "append",
         data: {
           id: app.globalData.UserID,
-          geo: locationEncapsulation()
+          geo: Util.locationEncapsulation()
         },
         success: function (res) {
           console.log(res.result); //状态信息

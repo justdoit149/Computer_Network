@@ -1,2 +1,2 @@
 <!--components/CityItem/CityItem.wxml-->
-<text>components/CityItem/CityItem.wxml</text>
+<text>{{Index}}  {{UserData.name}}</text>

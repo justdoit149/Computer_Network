@@ -3,7 +3,8 @@
 
 Component({
   properties: {
-
+    UserData: Object,
+    Index: Number
   },
 
   data: {
