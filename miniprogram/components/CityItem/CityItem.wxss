@@ -1,1 +1,32 @@
 /* components/CityItem/CityItem.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  border-radius: 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(#0869d8,#87c1f1);
+  align-items: center;
+  justify-content: space-around;
+  height: 200rpx;
+  width: 95%;
+  border-radius: 20px;
+  margin: 10px auto;
+}
+.index{
+  color: #ffffff;
+  font-size: 50rpx;
+  font-weight: 700;
+}
+.name{
+  color: #ffffff;
+  font-size: 50rpx;
+  font-weight: 700;
+}

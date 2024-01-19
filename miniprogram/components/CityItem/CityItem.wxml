@@ -1,2 +1,7 @@
 <!--components/CityItem/CityItem.wxml-->
-<text>{{Index}}  {{UserData.name}}</text>
+<view class="container">
+  <view class="header">
+    <view class="index">{{Index + 1}}</view>
+    <view class="name">{{UserData.name}}</view>
+  </view>
+</view>

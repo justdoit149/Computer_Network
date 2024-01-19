@@ -1,5 +1,6 @@
 <!--pages/List/List.wxml-->
-
-<view wx:for="{{UserData}}" wx:key="index">  
-  <CityItem UserData="{{UserData[index]}}" Index="{{index}}" bind:tap="onClickToWeather"></CityItem>  
-</view>
+<scroll-view class="container" scroll-y>
+  <view wx:for="{{UserData}}" wx:key="index">  
+    <CityItem UserData="{{UserData[index]}}" Index="{{index}}" bind:tap="onClickToWeather"></CityItem>  
+  </view>
+</scroll-view>
