@@ -1,12 +1,16 @@
 /* components/DayPart/DayPart.wxss */
-.container{
+.container {
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
   align-items: center;
   justify-content: center;
+  width: 100vw;
+  /* 使用vw单位使得宽度占满整个视口宽度 */
+  border-radius: 20px;
 }
-.header{
+
+.header {
   display: flex;
   flex-direction: column;
   background-color: #37a0dd;
@@ -14,8 +18,12 @@
   justify-content: space-around;
   height: 200rpx;
   width: 80%;
+  border-radius: 20px;
+  margin: 20px auto;
+  /* 增加上下组件与当前组件的距离，同时水平居中 */
 }
-.flex_one{
+
+.flex_one {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -23,17 +31,20 @@
   height: 150rpx;
   width: 80%;
 }
-.temperature{
+
+.temperature {
   color: #ffffff;
   font-size: 30px;
   font-weight: 500;
 }
-.weather{
+
+.weather {
   color: #ffffff;
   font-size: 30px;
   font-weight: 500;
 }
-.tips{
+
+.tips {
   color: #ffffff;
   font-size: 15px;
   font-weight: 300;

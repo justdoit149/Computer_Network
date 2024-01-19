@@ -1,12 +1,14 @@
 /* components/WeekPart/WeekPart.wxss */
-/* components/NowPart/NowPart.wxss */
-/* components/DayPart/DayPart.wxss */
+
 .container {
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
     align-items: center;
     justify-content: center;
+    width: 100vw;
+    /* 使用vw单位使得宽度占满整个视口宽度 */
+    border-radius: 20px;
 }
 
 .header {
@@ -17,6 +19,9 @@
     justify-content: space-around;
     height: 200rpx;
     width: 80%;
+    border-radius: 20px;
+    margin: 20px auto;
+    /* 增加上下组件与当前组件的距离，同时水平居中 */
 }
 
 .flex_one {
@@ -25,7 +30,8 @@
     align-items: center;
     justify-content: space-around;
     height: 150rpx;
-    width: 80%;
+    width: 100%;
+    /* 使用100%宽度，与上级容器等宽 */
 }
 
 .temperature {
@@ -34,14 +40,7 @@
     font-weight: 500;
 }
 
-.weather {
-    color: #ffffff;
-    font-size: 30px;
-    font-weight: 500;
-}
-
 .tips {
     color: #ffffff;
     font-size: 15px;
-    font-weight: 300;
 }
