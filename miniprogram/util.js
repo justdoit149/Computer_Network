@@ -13,7 +13,7 @@ module.exports = {
   locationEncapsulation: locationEncapsulation
 }
 
-const key = 'e6bb50558fb74844bf2ad50794cb0f95'
+const key = 'a3a945ae9c4f41a998e7902055b5ed09'
 const app = getApp()
 
 async function getNowWeather(locationID){
