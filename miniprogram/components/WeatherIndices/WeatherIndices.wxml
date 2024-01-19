@@ -1,2 +1,11 @@
 <!--components/WeatherIndices/WeatherIndices.wxml-->
-<text>components/WeatherIndices/WeatherIndices.wxml</text>
+<view class="container">
+  <scroll-view class="header" scroll-y>
+    <view wx:for="{{weatherIndices.daily}}" wx:for-index="index" wx:for-item="item">
+      <view class="activity">
+        <view class="activity_level">{{item.name}}:{{item.level}}</view>
+        <view class="activity_category">{{item.category}}</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

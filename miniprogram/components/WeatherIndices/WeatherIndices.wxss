@@ -1,1 +1,62 @@
 /* components/WeatherIndices/WeatherIndices.wxss */
+/* components/WeekPart/WeekPart.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  /* 使用vw单位使得宽度占满整个视口宽度 */
+  border-radius: 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: #37a0dd;
+  align-items: center;
+  justify-content: space-around;
+  height: 300rpx;
+  width: 95%;
+  border-radius: 20px;
+  margin: 10px auto;
+  /* 增加上下组件与当前组件的距离，同时水平居中 */
+}
+.exercise{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 75rpx;
+  width: 95%;
+}
+.activity{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 75rpx;
+  width: 95%;
+}
+
+.activity_level{
+  color:#ffffff;
+  font-size: 30rpx;
+  font-weight: 500;
+  padding-left: 5%;
+}
+.activity_category{
+  color:yellow;
+  font-size: 30rpx;
+  font-weight: 700;
+  padding-right: 5%;
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+
+
