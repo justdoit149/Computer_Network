@@ -1,11 +1,23 @@
 <!-- components/DayPart/DayPart.wxml -->
 <view class="container">
   <view class="header">
-    <view class="flex_one">
-      <image src="/images/{{dayWeather.hourly[0].icon}}.svg" style="height: 100rpx;width: 100rpx;filter: invert(1);"></image>
-      <image src="/images/{{dayWeather.hourly[6].icon}}.svg" style="height: 100rpx;width: 100rpx;filter: invert(1);"></image>
-      <image src="/images/{{dayWeather.hourly[12].icon}}.svg" style="height: 100rpx;width: 100rpx;filter: invert(1);"></image>
-      <image src="/images/{{dayWeather.hourly[18].icon}}.svg" style="height: 100rpx;width: 100rpx;filter: invert(1);"></image>
+    <view class="weather_24">
+      <view class="flex_one">
+        <image src="/images/{{dayWeather.hourly[0].icon}}.svg" style="height: 75rpx;width: 75rpx;filter: invert(1);"></image>
+        <view class="now">当前</view>
+      </view>
+      <view class="flex_two">
+        <image src="/images/{{dayWeather.hourly[6].icon}}.svg" style="height: 75rpx;width: 75rpx;filter: invert(1);"></image>
+        <view class="next_six">未来6时</view>
+      </view>
+      <view class="flex_three">
+        <image src="/images/{{dayWeather.hourly[12].icon}}.svg" style="height: 75rpx;width: 75rpx;filter: invert(1);"></image>
+        <view class="next_twelve">未来12时</view>
+      </view>
+      <view class="flex_four">
+        <image src="/images/{{dayWeather.hourly[18].icon}}.svg" style="height: 75rpx;width: 75rpx;filter: invert(1);"></image>
+        <view class="next_eighteen">未来18时</view>
+      </view>
     </view>
     <view class="tips">查看24小时天气</view>
   </view>

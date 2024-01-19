@@ -47,6 +47,6 @@
 
 .tips {
     color: #ffffff;
-    font-size: 15px;
-    font-weight: 300;
+    font-size: 12px;
+    font-weight: 400;
 }

@@ -22,30 +22,68 @@
   margin: 20px auto;
   /* 增加上下组件与当前组件的距离，同时水平居中 */
 }
-
-.flex_one {
+.weather_24 {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 175rpx;
+  width: 80%;
+}
+.flex_one {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
   height: 150rpx;
   width: 80%;
 }
-
-.temperature {
-  color: #ffffff;
-  font-size: 30px;
-  font-weight: 500;
+.flex_two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 150rpx;
+  width: 80%;
 }
-
-.weather {
-  color: #ffffff;
-  font-size: 30px;
-  font-weight: 500;
+.flex_three {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 150rpx;
+  width: 80%;
 }
-
+.flex_four {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 150rpx;
+  width: 80%;
+}
+.now {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+}
+.next_six {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+}
+.next_twelve {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+}
+.next_eighteen {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+}
 .tips {
   color: #ffffff;
-  font-size: 15px;
-  font-weight: 300;
+  font-size: 12px;
+  font-weight: 400;
 }
