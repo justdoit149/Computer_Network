@@ -35,18 +35,18 @@
 
 .temperature {
     color: #ffffff;
-    font-size: 30px;
+    font-size: 50rpx;
     font-weight: 500;
 }
 
 .weather {
     color: #ffffff;
-    font-size: 30px;
+    font-size: 50rpx;
     font-weight: 500;
 }
 
 .tips {
     color: #ffffff;
-    font-size: 12px;
+    font-size: 22rpx;
     font-weight: 400;
 }
