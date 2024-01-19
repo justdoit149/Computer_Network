@@ -5,7 +5,9 @@
       <button bind:tap="onClickToSearch" class="place">{{location.location[0].name}}</button>
     </view>
     <view class="background">
-      <button bind:tap="onClickToStar" class="star">收藏</button>
+      <button bind:tap="onClickToStar" class="star"> 
+        <text style="color: {{isStarred ? 'red' : 'white'}}">收藏</text> 
+      </button> 
     </view>
   </view>
   <NowPart nowWeather = "{{nowWeather}}" airQuality = "{{airQuality}}" bind:tap="onClickNowPart"> </NowPart>
