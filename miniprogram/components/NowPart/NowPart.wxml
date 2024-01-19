@@ -1,2 +1,11 @@
-<!--components/NowPart/NowPart.wxml-->
-<text>components/NowPart/NowPart.wxml</text>
+<!-- components/NowPart/NowPart.wxml -->
+<view class="container">
+    <view class="header">
+        <view class="flex_one">
+            <image src="/images/{{nowWeather.now.icon}}.svg" style="height: 100rpx;width: 100rpx;filter: invert(1);"></image>
+            <view class="temperature">{{ nowWeather.now.text}}</view>
+            <view class="weather">{{ nowWeather.now.temp}}℃</view>
+        </view>
+        <view class="tips">查看当前天气</view>
+    </view>
+</view>

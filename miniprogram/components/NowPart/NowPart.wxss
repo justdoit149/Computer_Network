@@ -1,1 +1,46 @@
 /* components/NowPart/NowPart.wxss */
+/* components/DayPart/DayPart.wxss */
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: #37a0dd;
+    align-items: center;
+    justify-content: space-around;
+    height: 200rpx;
+    width: 80%;
+}
+
+.flex_one {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 150rpx;
+    width: 80%;
+}
+
+.temperature {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.weather {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.tips {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 300;
+}
