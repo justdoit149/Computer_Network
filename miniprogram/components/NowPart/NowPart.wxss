@@ -18,9 +18,9 @@
     align-items: center;
     justify-content: space-around;
     height: 200rpx;
-    width: 95%;
+    width: 80%;
     border-radius: 20px;
-    margin: 10px auto;
+    margin: 20px auto;
     /* 增加上下组件与当前组件的距离，同时水平居中 */
 }
 

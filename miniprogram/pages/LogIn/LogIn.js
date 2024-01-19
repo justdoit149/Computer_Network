@@ -3,6 +3,7 @@
 
 var Util = require('../../util');
 const app = getApp()
+
 Page({
   async onLoad(options) {
     wx.cloud.callFunction({
@@ -15,19 +16,9 @@ Page({
             id: app.globalData.UserID,
           },
           success: function (res) {
-            // console.log(res.result); //状态信息
+            Util.getUserData()
           },
-        })
-        wx.cloud.callFunction({
-          name: "getUserData",
-          data: {
-            id: app.globalData.UserID,
-          },
-          success: function (res) {
-            // console.log(res.result); //输出数组
-            app.globalData.UserData = res.result
-          },
-        })
+        })  
         app.globalData.location = await Util.getUserLocation()
         if (app.globalData.location != null) {
           wx.switchTab({

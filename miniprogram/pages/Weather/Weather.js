@@ -1,7 +1,9 @@
 // pages/Weather/Weather.js
 // 天气页，包括NowPart、DayPart、WeekPart、WeatherIndices组件
 
+const { locationEncapsulation } = require('../../util');
 var Util = require('../../util');
+const app = getApp()
 
 Page({
   data: {
@@ -57,5 +59,39 @@ Page({
     wx.navigateTo({
       url: '../../pages/WeekWeather/WeekWeather?weekWeather='+JSON.stringify(this.weekWeather)
     })
+  },
+
+  onClickToSearch: function(){
+    wx.navigateTo({
+      url: '../../pages/Search/Search',
+    })
+  },
+
+  onClickToStar: function(){
+    if(Util.isStarred()){
+      wx.cloud.callFunction({
+        name: "delete",
+        data: {
+          id: app.globalData.UserID,
+          geo: locationEncapsulation()
+        },
+        success: function (res) {
+          console.log(res.result); //状态信息
+          Util.getUserData()
+        }
+      })
+    }else{
+      wx.cloud.callFunction({
+        name: "append",
+        data: {
+          id: app.globalData.UserID,
+          geo: locationEncapsulation()
+        },
+        success: function (res) {
+          console.log(res.result); //状态信息
+          Util.getUserData()
+        }
+      })
+    }
   }
 })
