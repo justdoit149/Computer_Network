@@ -72,6 +72,7 @@ Page({
 
   onClickToStar: function(){
     if(this.isStarred){
+      console.log("已经收藏了")
       wx.cloud.callFunction({
         name: "delete",
         data: {
@@ -84,6 +85,7 @@ Page({
         }
       })
     }else{
+      console.log("还没有收藏")
       wx.cloud.callFunction({
         name: "append",
         data: {

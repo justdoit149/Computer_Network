@@ -21,7 +21,7 @@ Page({
         })  
         app.globalData.location = await Util.getUserLocation()
         if (app.globalData.location != null) {
-          wx.switchTab({
+          wx.reLaunch({
             url: '../Weather/Weather',
           })
         } 

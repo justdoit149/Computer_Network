@@ -7,6 +7,7 @@ module.exports = {
   getAirQuality: getAirQuality, //获取空气质量
   getWeatherIndices: getWeatherIndices, //获取天气指数
   getUserLocation: getUserLocation, //获取当前位置信息
+  getLocation: getLocation, //获取位置信息
   syncRequest: syncRequest, //syncRequest()是wx.request()封装后的异步函数，参数和返回值与wx.request一样
   getUserData: getUserData, //对getUserData云函数的封装，异步地获取用户的收藏列表
   isStarred: isStarred, //检查地点是否被收藏，以location的id为关键字
@@ -87,20 +88,25 @@ async function getUserLocation(){
     console.log('经纬度请求失败',err)
     return null
   }
+  res2 = getLocation(res.longitude + ',' + res.latitude)
+  return res2
+}
+
+async function getLocation(location){
+  var res = null
   try {
-    res2 = await syncRequest({
+    res = await syncRequest({
       url: 'https://geoapi.qweather.com/v2/city/lookup',
       data: {
         key: key,
-        location: res.longitude + ',' + res.latitude
+        location: location
       },
     })
   } catch (err) {
     console.log('位置请求失败',err)
     return null
   }
-  // console.log(res2.data.location[0].name,res2.data.location[0].adm1,res2.data.location[0].adm2)
-  return res2.data
+  return res.data
 }
 
 //这段代码以后大概还能用得上

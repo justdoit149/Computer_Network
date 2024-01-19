@@ -1,6 +1,7 @@
 // pages/List/List.js
 // 列表页，包括CityItem组件
 
+const Util = require("../../util")
 const app = getApp()
 
 Page({
@@ -21,7 +22,11 @@ Page({
     })
   },
 
-  onClickToWeather: function(){
-
+  onClickToWeather: async function(event){
+    const index = event.currentTarget.dataset.index
+    app.globalData.location = await Util.getLocation(this.UserData[index].locationID)
+    wx.reLaunch({
+      url: '../../pages/Weather/Weather'
+    })
   }
 })
