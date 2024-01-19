@@ -1,5 +1,4 @@
-<!--pages/Weather/Weather.wxml-->
-<text>pages/Weather/Weather.wxml</text> 
+<!--pages/Weather/Weather.wxml--> 
 <NowPart nowWeather = "{{nowWeather}}" airQuality = "{{airQuality}}" bind:tap="onClickNowPart"> </NowPart>
 <DayPart dayWeather = "{{dayWeather}}" bind:tap="onClickDayPart"> </DayPart>
 <WeekPart weekWeather = "{{weekWeather}}" bind:tap="onClickWeekPart"> </WeekPart>
