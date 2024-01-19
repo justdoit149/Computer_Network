@@ -43,7 +43,7 @@ Page({
               icon: 'none'
             });
             if (app.globalData.location != null) {
-              wx.switchTab({
+              wx.reLaunch({
                 url: '../Weather/Weather',
               })
             }
