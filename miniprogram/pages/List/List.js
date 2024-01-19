@@ -9,7 +9,7 @@ Page({
     UserData: Array
   },
 
-  onLoad(options) {
+  onShow() {
     this.UserData = app.globalData.UserData
     this.setData({
       UserData: app.globalData.UserData

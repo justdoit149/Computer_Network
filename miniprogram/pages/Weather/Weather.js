@@ -43,7 +43,6 @@ Page({
       airQuality: results[3],
       weatherIndices: results[4]
     })
-    this.onClickToStar()
   },
 
   onClickNowPart: function(){
@@ -71,7 +70,8 @@ Page({
   },
 
   onClickToStar: function(){
-    if(this.isStarred){
+    let that = this
+    if(that.isStarred){
       console.log("已经收藏了")
       wx.cloud.callFunction({
         name: "delete",
@@ -81,6 +81,10 @@ Page({
         },
         success: function (res) {
           console.log(res.result); //状态信息
+          that.isStarred = false
+          that.setData({
+            isStarred: false
+          })
           Util.getUserData()
         }
       })
@@ -94,6 +98,10 @@ Page({
         },
         success: function (res) {
           console.log(res.result); //状态信息
+          that.isStarred = true
+          that.setData({
+            isStarred: true
+          })
           Util.getUserData()
         }
       })

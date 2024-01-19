@@ -151,11 +151,11 @@ function isStarred(){
 
 function locationEncapsulation(){
   var location = {
-    locationID: app.globalData.location.location[0].id,
-    name: app.globalData.location.location[0].name,
-    adm2: app.globalData.location.location[0].adm2,
     adm1: app.globalData.location.location[0].adm1,
-    country: app.globalData.location.location[0].country
+    adm2: app.globalData.location.location[0].adm2,
+    country: app.globalData.location.location[0].country,
+    locationID: app.globalData.location.location[0].id,
+    name: app.globalData.location.location[0].name
   }
   return location
 }
