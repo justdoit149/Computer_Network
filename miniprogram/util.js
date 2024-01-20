@@ -19,7 +19,7 @@ module.exports = {
 // e6bb50558fb74844bf2ad50794cb0f95
 // 6b286c0f26f041c9863ccffd6921cbf4
 
-const key = '6b286c0f26f041c9863ccffd6921cbf4'
+const key = 'e6bb50558fb74844bf2ad50794cb0f95'
 const app = getApp()
 
 async function getNowWeather(locationID){

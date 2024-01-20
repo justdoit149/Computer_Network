@@ -1,52 +1,52 @@
 /* components/NowPart/NowPart.wxss */
 /* components/DayPart/DayPart.wxss */
 .container {
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    /* 使用vw单位使得宽度占满整个视口宽度 */
-    border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  /* 使用vw单位使得宽度占满整个视口宽度 */
+  border-radius: 20px;
 }
 
 .header {
-    display: flex;
-    flex-direction: column;
-    background-color: #37a0dd;
-    align-items: center;
-    justify-content: space-around;
-    height: 200rpx;
-    width: 95%;
-    border-radius: 20px;
-    margin: 10px auto;
-    /* 增加上下组件与当前组件的距离，同时水平居中 */
+  display: flex;
+  flex-direction: column;
+  background-color: #37a0dd;
+  align-items: center;
+  justify-content: space-around;
+  height: 200rpx;
+  width: 95%;
+  border-radius: 20px;
+  margin: 10px auto;
+  /* 增加上下组件与当前组件的距离，同时水平居中 */
 }
 
 .flex_one {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    height: 150rpx;
-    width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 150rpx;
+  width: 80%;
 }
 
 .temperature {
-    color: #ffffff;
-    font-size: 50rpx;
-    font-weight: 500;
+  color: #ffffff;
+  font-size: 50rpx;
+  font-weight: 500;
 }
 
 .weather {
-    color: #ffffff;
-    font-size: 50rpx;
-    font-weight: 500;
+  color: #ffffff;
+  font-size: 50rpx;
+  font-weight: 500;
 }
 
 .tips {
-    color: #ffffff;
-    font-size: 22rpx;
-    font-weight: 400;
+  color: #ffffff;
+  font-size: 22rpx;
+  font-weight: 400;
 }
