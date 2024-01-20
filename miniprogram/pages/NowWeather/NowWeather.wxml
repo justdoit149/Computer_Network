@@ -5,7 +5,7 @@
     <view class="current-weather">
         <view class="temperature-and-icon">
             <text class="temperature">{{ nowWeather.now.temp }}°C {{ nowWeather.now.text }}</text>
-            <image src="/images/{{nowWeather.now.icon}}.svg" style="height: 200rpx; width: 200rpx; filter: invert(1);"></image>
+            <image wx:if="{{nowWeather.now.icon.length>0}}" src="/images/{{nowWeather.now.icon}}.svg" style="height: 200rpx; width: 200rpx; filter: invert(1);"></image>
         </view>
         <text class="wind">风向风级: {{ nowWeather.now.windDir }}{{ nowWeather.now.windScale }}级</text>
         <text class="precip">降水量: {{ nowWeather.now.precip }}mm</text>

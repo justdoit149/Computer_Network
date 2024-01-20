@@ -3,15 +3,15 @@
   <view class="header">
     <view class="weather_24">
       <view class="flex_one">
-        <image src="/images/{{weekWeather.daily[0].iconDay}}.svg" style="height: 75rpx;width: 75rpx;filter: invert(1);"></image>
+        <image wx:if="{{weekWeather.daily[0].iconDay.length>0}}" src="/images/{{weekWeather.daily[0].iconDay}}.svg" style="height: 75rpx;width: 75rpx;filter: invert(1);"></image>
         <view class="today">今天</view>
       </view>
       <view class="flex_two">
-        <image src="/images/{{weekWeather.daily[1].iconDay}}.svg" style="height: 75rpx;width: 75rpx;filter: invert(1);"></image>
+        <image wx:if="{{weekWeather.daily[1].iconDay.length>0}}" src="/images/{{weekWeather.daily[1].iconDay}}.svg" style="height: 75rpx;width: 75rpx;filter: invert(1);"></image>
         <view class="tomorrow">明天</view>
       </view>
       <view class="flex_three">
-        <image src="/images/{{weekWeather.daily[2].iconDay}}.svg" style="height: 75rpx;width: 75rpx;filter: invert(1);"></image>
+        <image wx:if="{{weekWeather.daily[2].iconDay.length>0}}" src="/images/{{weekWeather.daily[2].iconDay}}.svg" style="height: 75rpx;width: 75rpx;filter: invert(1);"></image>
         <view class="after_tomorrow">后天</view>
       </view>
     </view>

@@ -2,7 +2,7 @@
 <view class="container">
     <view class="header">
         <view class="flex_one">
-            <image src="/images/{{nowWeather.now.icon}}.svg" style="height: 100rpx;width: 100rpx;filter: invert(1);"></image>
+            <image wx:if="{{nowWeather.now.icon.length>0}}" src="/images/{{nowWeather.now.icon}}.svg" style="height: 100rpx;width: 100rpx;filter: invert(1);"></image>
             <view class="temperature">{{ nowWeather.now.text}}</view>
             <view class="weather">{{ nowWeather.now.temp}}℃</view>
         </view>

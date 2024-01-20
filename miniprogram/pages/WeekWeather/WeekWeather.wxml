@@ -5,7 +5,7 @@
     <view class="visual">
       <view class="header">
         <view class="temperature">{{weekWeather.daily[0].tempMin}} ~ {{weekWeather.daily[0].tempMax}}℃</view>
-        <image src="/images/{{weekWeather.daily[0].iconDay}}.svg" style="height: 200rpx;width: 200rpx;filter: invert(1);"></image>
+        <image wx:if="{{weekWeather.daily[0].iconDay.length>0}}" src="/images/{{weekWeather.daily[0].iconDay}}.svg" style="height: 200rpx;width: 200rpx;filter: invert(1);"></image>
       </view>
       <view class="time">{{weekWeather.daily[0].fxDate}}</view>
     </view>
@@ -14,7 +14,7 @@
     <view wx:for="{{weekWeather.daily}}" wx:if="{{index > 0}}" wx:for-index="index" wx:for-item="item">
       <view class="list_item_one {{index % 2 == 0 ? 'list_item_two' : ''}}">
         <text class="list_date">{{item.fxDate}}</text>
-        <image src="/images/{{item.iconDay}}.svg" style="height:40rpx;width:40rpx" ></image>
+        <image wx:if="{{item.iconDay.length>0}}" src="/images/{{item.iconDay}}.svg" style="height:40rpx;width:40rpx" ></image>
         <text class="list_t_highest">{{item.tempMax}}℃</text>
         <text class="list_t_lowest">{{item.tempMin}}℃</text>
       </view>
