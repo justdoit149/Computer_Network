@@ -24,10 +24,25 @@ Page({
           wx.reLaunch({
             url: '../Weather/Weather',
           })
+        } else {
+          wx.setNavigationBarTitle({
+            title: '登录失败',
+          })
+          wx.showToast({
+            title: '登录失败，请在屏幕右上“设置”中开启定位权限后，下拉刷新重新登录',
+            icon: 'none',
+            duration: 5000
+          });
         } 
       } 
     })
   },
+
+  onPullDownRefresh(){
+    wx.reLaunch({
+      url: '../LogIn/LogIn',
+    })
+  }
 });
 
 
