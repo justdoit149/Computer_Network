@@ -13,24 +13,26 @@ page{
   height: 100%;
 }
 .header {
-  flex: 0 0 80%;
+  flex: 0 0 90%;
   width: 100%;
 }
 .title{
-  flex: 0 0 20%;
+  flex: 0 0 10%;
   width: 100%;
+  padding-bottom: 20rpx;
 }
 .city{
   font-size: 50rpx;
   color: rgb(255, 208, 0);
   font-weight: 700;
   padding-left: 5%;
+  padding-top: 10rpx;
   text-align: left;
 }
 .search{
   width: 100%;
   background-color: antiquewhite;
-  margin-top: 5%;
+  margin-top: 10rpx;
 }
 ::-webkit-scrollbar{
   width: 0;
