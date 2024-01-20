@@ -1,11 +1,43 @@
 /* pages/List/List.wxss */
-.container {
+page{
+  overflow: hidden;
+}
+.container{
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  background: #ffffff;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+}
+.header {
+  height: 900rpx;
+  width: 100vw;
+}
+.title{
+  height: 100rpx;
+  display: flex;
+  width: 100vw;
+  justify-content: left;
+}
+.city{
+  font-size: 60rpx;
+  color: rgb(255, 208, 0);
+  font-weight: 700;
+  padding-left: 5%;
+}
+.search{
+  display: flex;
+  background-color: aliceblue;
   align-items: center;
   justify-content: center;
+  height: 75rpx;
   width: 100vw;
+  border-radius: 20px;
+}
+.search text{
+  font-size: 30rpx;
+  font-weight: 700;
 }
 ::-webkit-scrollbar{
   width: 0;
