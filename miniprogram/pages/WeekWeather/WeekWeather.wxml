@@ -11,7 +11,7 @@
     </view>
   </view>
   <scroll-view class="list" scroll-y style ="height:{{scrollHeight}}rpx;">
-    <view wx:for="{{weekWeather.daily}}" wx:if="{{index > 0}}" wx:for-index="index" wx:for-item="item">
+    <view wx:for="{{weekWeather.daily}}" wx:if="{{index > 0}}" wx:for-index="index" wx:for-item="item" wx:key="key">
       <view class="list_item_one {{index % 2 == 0 ? 'list_item_two' : ''}}">
         <text class="list_date">{{item.fxDate}}</text>
         <image wx:if="{{item.iconDay.length>0}}" src="/images/{{item.iconDay}}.svg" style="height:40rpx;width:40rpx" ></image>

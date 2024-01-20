@@ -12,7 +12,7 @@
     </view>
   </view>
   <scroll-view class="list" scroll-x = "true">
-    <view wx:for="{{dayWeather.hourly}}" wx:if="{{index > 0}}" wx:for-index="index" wx:for-item="item" class="list_item_parent">
+    <view wx:for="{{dayWeather.hourly}}" wx:if="{{index > 0}}" wx:for-index="index" wx:for-item="item" class="list_item_parent" wx:key="key">
       <view class="list_item_one {{index % 2 == 0 ? 'list_item_two' : ''}}">
         <text class="list_time">{{hour[index]}}</text>
         <image wx:if="{{item.icon.length>0}}" src="/images/{{item.icon}}.svg" style="height:40rpx;width:40rpx" ></image>
