@@ -2,7 +2,7 @@
 <view class="container">
   <view class="title">
     <view class="city">城市位置</view>
-    <button bind:tap="onClickToSearch" class="search">搜索位置</button>
+    <button bind:tap="onClickToSearch" class="search" style="width: 710rpx;">搜索位置</button>
   </view>
   <scroll-view class="header" scroll-y style ="height:{{scrollHeight}}rpx;">
     <view wx:for="{{UserData}}" wx:key="index">  
