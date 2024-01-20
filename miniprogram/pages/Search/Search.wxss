@@ -1,1 +1,32 @@
 /* pages/Search/Search.wxss */
+/* pages/Search/Search.wxss */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10rpx;
+    border: 1px solid #ccc;
+    border-radius: 5rpx;
+    margin-right: 10rpx;
+}
+
+.search-btn {
+    padding: 10rpx;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5rpx;
+    cursor: pointer;
+}
