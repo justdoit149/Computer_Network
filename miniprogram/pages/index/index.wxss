@@ -1,9 +1,0 @@
-/* 这是WXSS的注释 */
-
-page {
-  padding-top: 54rpx;
-  background-color: #f6f6f6;
-  padding-bottom: 60rpx;
-  /*颜色渐变。可以用取色器更精确地取颜色*/
-  background: linear-gradient(rgb(43, 109, 231),rgb(173, 173, 248));
-}

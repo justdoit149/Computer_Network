@@ -1,7 +1,0 @@
-<!--components/Example/Example.wxml-->
-<view>
-  <text> 组件示例 </text>
-  <text> 123 </text>
-</view>
-
-

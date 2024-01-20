@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "cloud-tip-modal": "/components/cloudTipModal/index",
-    "example": "/components/Example/Example"
-  }
-}
