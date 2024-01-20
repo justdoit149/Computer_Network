@@ -14,17 +14,23 @@ const collection = db.collection('UserDataBase')
 // 云函数入口函数
 exports.main = async (event, context) => {
   const idToCheck = event.id
-  const stringToAdd = event.geo
+  const elementToAdd = event.geo
   try {
     const res = await collection.where({
-      id: idToCheck
+      _id: idToCheck
     }).get()
     if (res.data.length > 0) {
       var geoArray = res.data[0].geo
-      if (!geoArray.includes(stringToAdd)) {
-        geoArray.push(stringToAdd) // 将指定string添加到geo数组中  
+      var hasSameElement = false
+      for(var i = 0; i < geoArray.length; i++){
+        if(JSON.stringify(geoArray[i]) === JSON.stringify(elementToAdd)){
+          hasSameElement = true
+        }
+      }
+      if (!hasSameElement) {
+        geoArray.push(elementToAdd) // 将指定元素添加到geo数组中  
         await collection.where({
-          id: idToCheck
+          _id: idToCheck
         }).update({
           data: {
             geo: geoArray

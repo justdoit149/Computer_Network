@@ -18,7 +18,7 @@ exports.main = async (event, context) => {
   try {
     // 检查id是否存在  
     const result = await collection.where({
-      id: idToCheck
+      _id: idToCheck
     }).get()
     if (result.data.length > 0) {
       // 如果存在
@@ -27,7 +27,7 @@ exports.main = async (event, context) => {
       // 如果不存在，创建新的条目  
       await collection.add({
         data: {
-          id: idToCheck,
+          _id: idToCheck,
           geo: []
         }
       })

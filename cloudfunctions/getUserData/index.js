@@ -16,7 +16,7 @@ exports.main = async (event, context) => {
   const idToCheck = event.id
   try {
     const res = await collection.where({
-      id: idToCheck
+      _id: idToCheck
     }).get()
     if (res.data.length > 0) {
       return res.data[0].geo // 返回对应项的geo字段  

@@ -15,16 +15,16 @@ const collection = db.collection('UserDataBase')
 // 云函数入口函数
 exports.main = async (event, context) => {
   const idToCheck = event.id
-  const stringToDelete = event.geo
+  const elementToDelete = event.geo
   try {
     const res = await collection.where({
-      id: idToCheck
+      _id: idToCheck
     }).get()
     if (res.data.length > 0) {
       var geoArray = res.data[0].geo
-      geoArray = geoArray.filter(item => item !== stringToDelete); 
+      geoArray = geoArray.filter(item => !(JSON.stringify(item) === JSON.stringify(elementToDelete))); 
       await collection.where({
-        id: idToCheck
+        _id: idToCheck
       }).update({
         data: {
           geo: geoArray
