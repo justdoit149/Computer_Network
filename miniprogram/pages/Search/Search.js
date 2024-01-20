@@ -6,6 +6,14 @@ const app = getApp()
 Page({
   data: {
     searchInput: String, //搜索框输入的数据
+    popularLocations: Array
+  },
+
+  onLoad(options){
+    this.popularLocations = ["当前位置","北京市","上海市","广州市","深圳市","杭州市","南京市","成都市","重庆市","武汉市","苏州市","天津市"]
+    this.setData({
+      popularLocations: ["当前位置","北京市","上海市","广州市","深圳市","杭州市","南京市","成都市","重庆市","武汉市","苏州市","天津市"]
+    })
   },
 
   //搜索框bindinput
@@ -58,4 +66,19 @@ Page({
         break;
     }
   },
+
+  userLocation: async function(event){
+    const index = event.currentTarget.dataset.index
+    app.globalData.location = (index == 0 ? await Util.getUserLocation() : await Util.getLocation(this.popularLocations[index]))
+    if (app.globalData.location != null) {
+      wx.reLaunch({
+        url: '../Weather/Weather',
+      })
+    } else{
+      wx.showToast({
+        title: '请求失败',
+        icon: 'none'
+      });
+    }
+  }
 })

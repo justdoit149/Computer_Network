@@ -35,3 +35,26 @@
   border-radius: 8rpx;
   cursor: pointer;
 }
+
+.location-title {  
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.location-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  align-items: center;
+  gap:20rpx
+}
+
+.location-btn {
+  flex: 1 0 22%;
+  text-align: center;  
+  padding: 5rpx;
+  background-color: #bfdad7;
+  color: #000000;
+  border-radius: 8rpx;
+  cursor: pointer;
+}
