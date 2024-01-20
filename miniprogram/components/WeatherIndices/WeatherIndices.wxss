@@ -16,9 +16,11 @@
   flex-direction: column;
   background-color: #37a0dd;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   height: 500rpx;
   width: 95%;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
   border-radius: 20px;
   margin: 10px auto;
   /* 增加上下组件与当前组件的距离，同时水平居中 */
@@ -45,10 +47,4 @@
   font-size: 30rpx;
   font-weight: 700;
   padding-right: 5%;
-}
-
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-  color: transparent;
 }

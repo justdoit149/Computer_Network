@@ -36,3 +36,9 @@ page{
 .place{
   color: #ffffff;
 }
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

@@ -1,8 +1,8 @@
 <!--components/WeatherIndices/WeatherIndices.wxml-->
 <view class="container">
-  <scroll-view class="header" scroll-y>
+  <scroll-view enable-flex class="header" scroll-y>
     <view wx:for="{{weatherIndices.daily}}" wx:for-index="index" wx:for-item="item" wx:key="key">
-      <view class="activity">
+      <view class="activity" style="width: 710rpx;">
         <view class="activity_level">{{item.name}}:{{item.level}}</view>
         <view class="activity_category">{{item.category}}</view>
       </view>
