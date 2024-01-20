@@ -11,10 +11,10 @@ module.exports = {
   syncRequest: syncRequest, //syncRequest()是wx.request()封装后的异步函数，参数和返回值与wx.request一样
   getUserData: getUserData, //对getUserData云函数的封装，异步地获取用户的收藏列表
   isStarred: isStarred, //检查地点是否被收藏，以location的id为关键字
-  locationEncapsulation: locationEncapsulation
+  locationEncapsulation: locationEncapsulation //对location进行封装，便于存入数据库
 }
 
-// 备用key列表：
+// 备用key列表，如果调用api次数超限（状态码402）请自行更换：
 // a3a945ae9c4f41a998e7902055b5ed09
 // e6bb50558fb74844bf2ad50794cb0f95
 // 6b286c0f26f041c9863ccffd6921cbf4
@@ -85,7 +85,6 @@ async function getUserLocation(){
      type: 'wgs84',
     }) 
   } catch (err) {
-    console.log('经纬度请求失败',err)
     return null
   }
   res2 = getLocation(res.longitude + ',' + res.latitude)
@@ -103,7 +102,6 @@ async function getLocation(location){
       },
     })
   } catch (err) {
-    console.log('位置请求失败',err)
     return null
   }
   return res.data

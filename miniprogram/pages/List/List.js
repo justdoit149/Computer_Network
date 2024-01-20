@@ -30,7 +30,8 @@ Page({
       url: '../../pages/Weather/Weather'
     })
   },
-  cal_scrollHeight(){
+
+  cal_scrollHeight: function(){
     let that = this;
     let query = wx.createSelectorQuery().in(this);
     query.select('.title').boundingClientRect(function(res){

@@ -1,5 +1,4 @@
 // pages/Search/Search.js
-// 搜索页，下一阶段再做（应该这里加一个当前位置）
 
 const Util = require("../../util")
 const app = getApp()
@@ -18,7 +17,6 @@ Page({
 
   //搜索按钮bindtap
   search: async function () {
-    console.log('搜索内容:', this.data.searchInput)
     //调用和风geoAPI进行模糊搜索
     var tempLocation = await Util.getLocation(this.data.searchInput)
     switch (tempLocation.code) {
@@ -53,7 +51,11 @@ Page({
         });
         break;
       default:
-        console.log(tempLocation.code, "请求错误")
+        wx.showToast({
+          title: '请求错误',
+          icon: 'none'
+        });
+        break;
     }
   },
 })

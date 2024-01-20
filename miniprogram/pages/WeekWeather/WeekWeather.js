@@ -15,6 +15,7 @@ Page({
       location: getApp().globalData.location
     })
   },
+  
   cal_scrollHeight(){
     let that = this;
     let query = wx.createSelectorQuery().in(this);
