@@ -24,6 +24,7 @@
   border-radius: 8rpx;
   margin-right: 12rpx;
   background-color: #fff; 
+  width: 500rpx;
 }
 
 .search-btn {

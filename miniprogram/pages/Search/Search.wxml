@@ -2,6 +2,6 @@
 <view class="container">
     <view class="search-container">
         <input bindinput="inputChange" placeholder="请输入搜索内容" value="{{searchInput}}" class="search-input" />
-        <button bind:tap="search" class="search-btn">搜索</button>
+        <button bind:tap="search" class="search-btn" style="width: 150rpx;">搜索</button>
     </view>
 </view>
