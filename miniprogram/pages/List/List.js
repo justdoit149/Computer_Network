@@ -6,7 +6,8 @@ const app = getApp()
 
 Page({
   data: {
-    UserData: Array
+    UserData: Array,
+    scrollHeight: 0
   },
 
   onShow() {
@@ -28,5 +29,17 @@ Page({
     wx.reLaunch({
       url: '../../pages/Weather/Weather'
     })
-  }
+  },
+  cal_scrollHeight(){
+    let that = this;
+    let query = wx.createSelectorQuery().in(this);
+    query.select('.title').boundingClientRect(function(res){
+      let topHeight = res.height;
+      let screenHeight = wx.getSystemInfoSync().windowHeight;
+      let scrollHeight =  screenHeight - topHeight - 70;
+      that.setData({
+        scrollHeight: scrollHeight
+      })
+    }).exec();
+  },
 })

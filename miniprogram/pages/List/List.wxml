@@ -2,11 +2,9 @@
 <view class="container">
   <view class="title">
     <view class="city">城市位置</view>
+    <button bind:tap="onClickToSearch" class="search">搜索位置</button>
   </view>
-  <button bind:tap="onClickToSearch" class="search">
-    <text>搜索位置</text>
-  </button>
-  <scroll-view class="header" scroll-y style="height: 900rpx;">
+  <scroll-view class="header" scroll-y style ="height:{{scrollHeight}}rpx;">
     <view wx:for="{{UserData}}" wx:key="index">  
       <CityItem UserData="{{UserData[index]}}" Index="{{index}}" bind:tap="onClickToWeather" data-index="{{index}}"></CityItem>  
     </view>

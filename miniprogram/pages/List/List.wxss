@@ -1,43 +1,36 @@
 /* pages/List/List.wxss */
 page{
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
   overflow: hidden;
 }
 .container{
-  display: flex;
-  flex-direction: column;
-  background: #ffffff;
-  align-items: center;
-  justify-content: space-around;
-  width: 100vw;
+  flex-flow: column nowrap;
+  justify-content: top;
+  align-items: top;
+  width: 100%;
+  height: 100%;
 }
 .header {
-  height: 900rpx;
-  width: 100vw;
+  flex: 0 0 80%;
+  width: 100%;
 }
 .title{
-  height: 100rpx;
-  display: flex;
-  width: 100vw;
-  justify-content: left;
+  flex: 0 0 20%;
+  width: 100%;
 }
 .city{
-  font-size: 60rpx;
+  font-size: 50rpx;
   color: rgb(255, 208, 0);
   font-weight: 700;
   padding-left: 5%;
+  text-align: left;
 }
 .search{
-  display: flex;
-  background-color: aliceblue;
-  align-items: center;
-  justify-content: center;
-  height: 75rpx;
-  width: 100vw;
-  border-radius: 20px;
-}
-.search text{
-  font-size: 30rpx;
-  font-weight: 700;
+  width: 100%;
+  background-color: antiquewhite;
+  margin-top: 5%;
 }
 ::-webkit-scrollbar{
   width: 0;
