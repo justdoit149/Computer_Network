@@ -19,14 +19,17 @@
 
   "tabBar": {
     "color": "#A8A8A8",
-    "selectedColor": "#000000",
     "backgroundColor": "#ffffff",
     "list": [{
       "pagePath": "pages/Weather/Weather",
-      "text": "天气"
+      "text": "天气",
+       "iconPath":"images/天气.png",
+       "selectedIconPath": "images/天气.png"
     },{
       "pagePath": "pages/List/List",
-      "text": "列表"
+      "text": "列表",
+      "iconPath":"images/列表.png",
+      "selectedIconPath": "images/列表.png"
     }]
   },
 
