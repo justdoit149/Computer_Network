@@ -23,14 +23,6 @@
   margin: 10px auto;
   /* 增加上下组件与当前组件的距离，同时水平居中 */
 }
-.exercise{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  height: 75rpx;
-  width: 95%;
-}
 .activity{
   display: flex;
   flex-direction: row;
