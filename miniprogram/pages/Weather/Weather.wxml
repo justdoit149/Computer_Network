@@ -15,4 +15,3 @@
   <WeekPart weekWeather = "{{weekWeather}}" bind:tap="onClickWeekPart"> </WeekPart>
   <WeatherIndices weatherIndices = "{{weatherIndices}}"> </WeatherIndices>
 </view>
-<!---->

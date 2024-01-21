@@ -1,4 +1,4 @@
-// 工具类。
+// 工具js文件。
 
 module.exports = {
   getNowWeather: getNowWeather, //获取实时天气
